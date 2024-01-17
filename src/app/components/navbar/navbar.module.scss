@@ -13,7 +13,7 @@
   .navigation {
     position: absolute;
     top: 0;
-    padding: 5rem 0 0 0;
+    padding: 7rem 0 0 0;
     width: calc(100% - 20vw);
     display: flex;
     align-items: center;
@@ -24,6 +24,90 @@
       border: none;
       font-size: 1rem;
       cursor: pointer;
+      color: #fff;
+      transition: 0.5s color;
+    }
+
+    .burgerMenuContainer {
+      content: "";
+      width: 55px;
+      height: 25px;
+      position: relative;
+      right: 0;
+      cursor: pointer;
+      background-color: black;
+
+      .burgerMenuTrigger {
+        content: "";
+        width: 55px;
+        height: 25px;
+        position: relative;
+        right: 0;
+        cursor: pointer;
+        z-index: 100;
+      }
+
+      .burgerMenu {
+        content: "";
+        background: #fff;
+        position: absolute;
+        width: 55px;
+        height: 4px;
+        z-index: 0;
+        top: calc(25px / 2 - 1.5px);
+        transition: 0.25s width ease-in-out, 0.5s background-color ease-in-out;
+      }
+
+      .burgerMenu::after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 55px;
+        height: 4px;
+        transform: translateY(10px);
+        z-index: 0;
+        transition: 0.25s width ease-in-out, 0.5s background-color ease-in-out;
+      }
+
+      .burgerMenu::before {
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 55px;
+        height: 4px;
+        transform: translateY(-10px);
+        z-index: 0;
+        transition: 0.25s width ease-in-out, 0.5s background-color ease-in-out;
+      }
+
+      .burgerMenuTrigger:hover ~ .burgerMenu {
+        width: 35px;
+      }
+    }
+  }
+
+  .content {
+    position: absolute;
+    top: 30vh;
+    // display: none;
+
+    ul {
+      list-style: none;
+
+      li {
+        padding: 1rem 0;
+
+        a {
+          font-size: 3rem;
+          color: rgb(127, 127, 127);
+          transition: 0.25s color;
+        }
+
+        a:hover {
+          color: rgb(232, 232, 232);
+          transition: 0.25s color;
+        }
+      }
     }
   }
 }
