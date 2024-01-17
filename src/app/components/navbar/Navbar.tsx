@@ -13,6 +13,14 @@ const Navbar = () => {
           <div className={Styles.burgerMenu}></div>
         </div>
       </div>
+      <div className={Styles.content}>
+        <ul>
+          <li><a href="/"></a>home</li>
+          <li><a href="/"></a>about</li>
+          <li><a href="/"></a>portfolio</li>
+          <li><a href="/"></a>contact</li>
+        </ul>
+      </div>
     </div>
   );
 };

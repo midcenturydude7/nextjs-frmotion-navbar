@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 10vh;
+  background-color: black;
+  height: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.5s height;
+
+  .navigation {
+    position: absolute;
+    top: 0;
+    padding: 5rem 0 0 0;
+    width: calc(100% - 20vw);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button {
+      background-color: transparent;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+}
